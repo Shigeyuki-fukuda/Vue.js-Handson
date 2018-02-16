@@ -1,11 +1,10 @@
 <template lang="html">
-  <div class="">
-    <ul>
-      <li v-for="ticket in tickets" :key="ticket.id">
-        {{ticket.name}}: {{ticket.due}}<br>
-        {{ticket.description}}
-      </li>
-    </ul>
+  <div>
+    <el-table :data="tickets">
+      <el-table-column prop="name" label="チケット名" width="180px" />
+      <el-table-column prop="due" label="期限日" width="180px" />
+      <el-table-column prop="description" label="説明文" />
+    </el-table>
   </div>
 </template>
 

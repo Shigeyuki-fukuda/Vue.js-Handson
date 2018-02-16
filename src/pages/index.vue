@@ -1,6 +1,8 @@
 <template lang="html">
   <div class="">
-    No content
+    <el-button>
+      Button
+    </el-button>
   </div>
 </template>
 

@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import store from './stores'
 
+import ElementUI from 'element-ui'
+import './main.scss'
+
+Vue.use(ElementUI)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

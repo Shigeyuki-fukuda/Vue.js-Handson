@@ -10,6 +10,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    isLoggedIn: false,
     tickets: [
       {
         id: uuid(),
@@ -20,14 +21,21 @@ export default new Vuex.Store({
     ]
   },
   getters: {
+    isLoggedIn: (state) => state.isLoggedIn,
     tickets: (state) => state.tickets
   },
   mutations: {
+    doLogin (state) {
+      state.isLoggedIn = true
+    },
     createTicket (state, { ticket }) {
       state.tickets.push(ticket)
     }
   },
   actions: {
+    doLogin ({ commit }) {
+      commit('doLogin')
+    },
     createTicket ({ commit }, { payload }) {
       commit('createTicket', { ticket: payload })
     }

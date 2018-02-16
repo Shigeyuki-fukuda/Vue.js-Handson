@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Home from '@/pages/index'
+import Login from '@/pages/login'
 import View from '@/pages/_view'
 import TicketsIndex from '@/pages/tickets/index'
 import TicketsCreate from '@/pages/tickets/create'
@@ -10,6 +11,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/login',
+      name: 'ログイン',
+      component: Login
+    },
     {
       path: '/tickets',
       component: View,
@@ -37,7 +43,7 @@ export default new Router({
         },
         {
           path: '',
-          redirect: '/home'
+          redirect: '/login'
         }
       ]
     }
